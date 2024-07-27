@@ -11,9 +11,12 @@ function createGrid(width = 16) {
 
         // iterates of width 
         for (j = 0; j < width; j++) {
-            const newColumn = document.createElement("div");
-            newColumn.classList.add("gridItem");
-            newRow.appendChild(newColumn);
+            const newGridItem = document.createElement("div");
+            newGridItem.classList.add("gridItem");
+            newGridItem.addEventListener("mouseover", (e) => {
+                newGridItem.classList.add("mousedOver")
+            })
+            newRow.appendChild(newGridItem);
         }
     }
 }
