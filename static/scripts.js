@@ -21,4 +21,13 @@ function createGrid(width = 16) {
     }
 }
 
+btn = document.querySelector("button");
+btn.addEventListener("click", (e) => {
+    let newWidth = prompt("Enter a new size:");
+while (newWidth > 100 || newWidth < 1 || (newWidth * 10) % 10 !== 0) {
+        newWidth = prompt("Size must be a positive integer no larger than 100")
+    }
+    createGrid(newWidth);
+})
+
 createGrid();
