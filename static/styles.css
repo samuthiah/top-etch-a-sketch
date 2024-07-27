@@ -1,0 +1,25 @@
+. {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+.gridItem {
+    border: solid black 1px;
+    flex: 1;
+}
+
+.gridContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border: solid black 1px;
+}
+
+.gridRow {
+    display: flex;
+    flex: 1;
+}
