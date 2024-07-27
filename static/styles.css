@@ -4,19 +4,29 @@
 }
 
 html, body {
-    height: 100vh;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 .gridItem {
     border: solid black 1px;
     flex: 1;
+    height: 100%;
+    min-width: 10px;
 }
 
 .gridContainer {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
     border: solid black 1px;
+    height: 75%;
+    width: 75%;
+    align-self: center;
+    min-width: 200px;
 }
 
 .gridRow {
@@ -26,4 +36,15 @@ html, body {
 
 .mousedOver {
     background-color: black;
+}
+
+button {
+    width: 10%;
+    align-self: center;
+    min-width: min-content;
+    margin: 20px;
+    padding: 10px 1px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
 }

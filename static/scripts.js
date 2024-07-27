@@ -1,3 +1,5 @@
+
+
 // Grid is square so width = height
 function createGrid(width = 16) {
     // creates variable for gridContainer, clears its content in prep for new grid
@@ -14,7 +16,8 @@ function createGrid(width = 16) {
             const newGridItem = document.createElement("div");
             newGridItem.classList.add("gridItem");
             newGridItem.addEventListener("mouseover", (e) => {
-                newGridItem.classList.add("mousedOver")
+                newColor = "#" + randomColor();
+                newGridItem.style.backgroundColor = newColor;
             })
             newRow.appendChild(newGridItem);
         }
@@ -29,5 +32,11 @@ while (newWidth > 100 || newWidth < 1 || (newWidth * 10) % 10 !== 0) {
     }
     createGrid(newWidth);
 })
+
+function randomColor() {
+    newColor = Math.floor(Math.random() * ((16 ** 6) - 1));
+    newColor = newColor.toString(16);
+    return newColor;
+}
 
 createGrid();
